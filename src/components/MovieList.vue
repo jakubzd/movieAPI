@@ -1,17 +1,23 @@
 <template>
   <div class="overflow-auto">
 
-    <div>
+    <div class="w-25 p-1" style="margin-top:5px">
       <b-form-input v-model="title" type="text" placeholder="Enter the movie title"></b-form-input>
+      <div class="mt-2"></div>
       <b-form-input v-model="year" type="number" placeholder="Enter the year it was made"></b-form-input>
+      <div class="mt-2"></div>
       <b-form-input v-model="nominations" type="number" placeholder="Enter how many nominations it got"></b-form-input>
+      <div class="mt-2"></div>
       <b-form-input v-model="wins" type="number" placeholder="Enter how many wins it got"></b-form-input>
+      <div class="mt-2"></div>
       <b-button v-on:click="addMovie" pill variant="success">Add a movie</b-button>
+      <div class="mt-2"></div>
       <b-form-input v-model="id" type="number" placeholder="Movie Id"></b-form-input>
+      <div class="mt-2"></div>
       <b-button v-on:click="deleteMovie" pill variant="danger">Delete</b-button>
     </div>
+    <div class="w-50 p-3" style="margin-top:5px">
 
-  <div class="b-table-responsive-sm">
     <b-table bordered striped hover
         id="my-table"
         :items="movies"
@@ -64,7 +70,7 @@ export default {
           sortable: true,
         }
       ],
-      perPage: 15,
+      perPage: 10,
       currentPage: 1,
       movies: [],
       title: "",
